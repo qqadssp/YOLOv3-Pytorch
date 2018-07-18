@@ -1,0 +1,5 @@
+train  = 2012_train.txt
+valid  = 2012_val.txt
+names = data/voc.names
+backup = backup
+gpus  = 0

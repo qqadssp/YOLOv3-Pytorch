@@ -20,32 +20,32 @@ pytorch 0.4
 
 1. Download this repo and VOC dataset  
 '''
-    git clone git@github.com:qqadssp/YOLOv3-Pytorch  
-    cd YOLOv3-Pytorch  
-    wget https://pjreddie.com/media/files/VOCtrainval_11-May-2012.rar  
-    tar xf VOCtrainval_11-May-2012.rar  
+git clone git@github.com:qqadssp/YOLOv3-Pytorch  
+cd YOLOv3-Pytorch  
+wget https://pjreddie.com/media/files/VOCtrainval_11-May-2012.rar  
+tar xf VOCtrainval_11-May-2012.rar  
 '''
 2. Generate Labels for VOC  
 '''
-    python voc_label.py  
+ python voc_label.py  
 '''
 3. Modify cfg in cfg/voc.data for Pascal Data  
 '''
-    train = <path-to-voc>/2012_train.txt  
-    valid = <path-to-voc>/2012_val.txt  
+train = <path-to-voc>/2012_train.txt  
+valid = <path-to-voc>/2012_val.txt  
 '''
 4. Download Pretrained Convolutional Weights  
 '''
-    wget https://pjreddie.com/media/files/darknet53.conv.74  
+wget https://pjreddie.com/media/files/darknet53.conv.74  
 '''
 5. Train the Model  
 '''
-    python train.py cfg/voc.data cfg/yolov3-voc.cfg darknet53.conv.74  
+python train.py cfg/voc.data cfg/yolov3-voc.cfg darknet53.conv.74  
 '''
 ## Detect
 
 Download Pretrained Weitghts and Detect  
 '''
-    wget https://pjreddie.com/media/files/yolov3.weights  
-    python detect.py cfg/yolov3.cfg yolov3.weights data/dog.jpg  
+wget https://pjreddie.com/media/files/yolov3.weights  
+python detect.py cfg/yolov3.cfg yolov3.weights data/dog.jpg  
 '''
